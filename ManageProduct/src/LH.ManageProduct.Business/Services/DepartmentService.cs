@@ -18,6 +18,14 @@ namespace LH.ManageProduct.Business.Services
         {
             return await _departamentRepository.GetAllDepartment();
         }
+        public async Task CreateDepartmentsAsync(IEnumerable<Department> departments)
+        {
+            foreach (var department in departments)
+            {
+                await _departamentRepository.CreateDepartment(department);
+            }
+        }
+
         public void Dispose()
         {
             _departamentRepository.Dispose();

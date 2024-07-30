@@ -1,7 +1,6 @@
 ﻿using LH.ManageProduct.Api.Configurations;
 using LH.ManageProduct.Api.Extensions;
 using LH.ManageProduct.Data.Context;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 
@@ -58,7 +57,6 @@ namespace LH.ManageProduct.Api
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
-            // Configurãções para não precisar de certificado rodando em docker
             app.UseDeveloperExceptionPage();
 
             app.UseMiddleware<ExceptionMiddleware>();
@@ -66,6 +64,12 @@ namespace LH.ManageProduct.Api
             app.UseMvcConfiguration();
 
             app.UseSwaggerConfig(provider);
+
+            Task.Run(async () =>
+            {
+                using var scope = app.ApplicationServices.CreateScope();
+                await DbMigrationHelpers.EnsureSeedData(scope.ServiceProvider);
+            }).Wait();
         }
     }
 }
