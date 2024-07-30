@@ -54,6 +54,7 @@ Ele utiliza uma série de tecnologias e bibliotecas para garantir eficiência, s
 2. Certifique-se de que o Docker esteja instalado na sua máquina para executar o próximo comando.
    - **Instruções**: Abra o prompt de comando (cmd) na raiz do projeto (Soluction) e navegue até o diretório onde estão localizados os arquivos `start_containers.bat` e `docker-compose.yml`.
    -  Em seguida, execute o script de inicialização dos containers Docker:
+exemplo: `\backend-manage-produc\ManageProduct> .\script-docker-compose.bat`
      ```bash
      start_containers.bat
      ```
