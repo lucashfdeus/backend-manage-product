@@ -1,4 +1,4 @@
-# Projeto de Gerenciamento de Produtos - Backend
+# ManageProduct - Backend
 
 Este projeto é uma aplicação backend desenvolvida com ASP.NET Core 8.0 para gerenciar produtos e departamentos,
 além de fornecer autenticação e autorização de usuários.
