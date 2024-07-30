@@ -1,0 +1,20 @@
+-- Instalar a extensão uuid-ossp se não estiver instalada
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE Departments (
+    Id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    Code VARCHAR(50) NOT NULL UNIQUE,  -- Código do departamento
+    Description TEXT NOT NULL           -- Descrição do departamento
+);
+
+-- Criação da tabela "Products"
+CREATE TABLE Products (
+    Id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),      -- Identificador único do produto
+    Description TEXT NOT NULL,                           -- Descrição do produto
+    DepartmentCode VARCHAR(50) REFERENCES Departments(Code) ON DELETE SET NULL, -- Referência ao departamento
+    Price NUMERIC(18, 2) NOT NULL,                       -- Preço do produto
+    Status BOOLEAN DEFAULT TRUE                          -- Status do produto
+);
+
+-- Adicione um índice para a coluna DepartmentCode na tabela Products, se necessário
+CREATE INDEX idx_department_code ON Products (DepartmentCode);
