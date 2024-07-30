@@ -53,6 +53,8 @@ Ele utiliza uma série de tecnologias e bibliotecas para garantir eficiência, s
      start_containers.bat
      ```
 
-3. Execute o script para atualizar o banco de dados, incluindo a criação das tabelas necessárias para o Identity.
+3. Execute o comando para atualizar o banco de dados com as migrations geradas pelo Entity Framework Core. O comando a ser utilizado é:
+   ```bash
+   update-database --initial
 
 
