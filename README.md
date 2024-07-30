@@ -1,7 +1,8 @@
 # ManageProduct - Backend
 
 Este projeto é uma aplicação backend desenvolvida com ASP.NET Core 8.0 para gerenciar produtos e departamentos,
-além de fornecer autenticação e autorização de usuários.
+além de fornecer autenticação e autorização de usuários. O projeto adota uma arquitetura em camadas e segue o padrão SOLID,
+além de utilizar o padrão UnitOfWork para gerenciar transações e operações de banco de dados.
 Ele utiliza uma série de tecnologias e bibliotecas para garantir eficiência, segurança e escalabilidade.
 
 ## Funcionalidades
