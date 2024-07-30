@@ -56,6 +56,7 @@ exemplo: `\backend-manage-produc\ManageProduct> .\script-docker-compose.bat`
      ```
 
 3. Execute o comando para atualizar o banco de dados com as migrations geradas pelo Entity Framework Core. O comando a ser utilizado é:
+`Package manager console`
    ```bash
    Update-Database -Context ApplicationDbContext
 
