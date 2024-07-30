@@ -45,3 +45,14 @@ Ele utiliza uma série de tecnologias e bibliotecas para garantir eficiência, s
 1. Clone o repositório:
    ```bash
    git clone https://github.com/lucashfdeus/backend-manage-product.git
+
+2. Certifique-se de que o Docker esteja instalado na sua máquina para executar o próximo comando.
+   - **Instruções**: Abra o prompt de comando (cmd) e navegue até o diretório onde estão localizados os arquivos `start_containers.bat` e `docker-compose.yml`.
+   -  Em seguida, execute o script de inicialização dos containers Docker:
+     ```bash
+     start_containers.bat
+     ```
+
+3. Execute o script para atualizar o banco de dados, incluindo a criação das tabelas necessárias para o Identity.
+
+
