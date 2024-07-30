@@ -60,8 +60,7 @@ exemplo: `\backend-manage-produc\ManageProduct> .\script-docker-compose.bat`
    ```bash
    Update-Database -Context ApplicationDbContext
 
-   ## Observação Importante
-
+## Observação Importante
 **⚠️ Certifique-se de executar a aplicação em modo `Self-Hosting` para garantir que a porta disponibilizada para o serviço esteja corretamente configurada e acessível. Isso é crucial para o funcionamento adequado da aplicação.**
 
 
