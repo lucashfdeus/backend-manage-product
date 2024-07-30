@@ -46,6 +46,10 @@ Ele utiliza uma série de tecnologias e bibliotecas para garantir eficiência, s
    ```bash
    git clone https://github.com/lucashfdeus/backend-manage-product.git
 
+## Observação Importante
+
+**⚠️ Certifique-se de executar a aplicação em modo Self-Hosting para garantir que a porta disponibilizada para o serviço esteja corretamente configurada e acessível. Isso é crucial para o funcionamento adequado da aplicação.**
+
 2. Certifique-se de que o Docker esteja instalado na sua máquina para executar o próximo comando.
    - **Instruções**: Abra o prompt de comando (cmd) e navegue até o diretório onde estão localizados os arquivos `start_containers.bat` e `docker-compose.yml`.
    -  Em seguida, execute o script de inicialização dos containers Docker:
