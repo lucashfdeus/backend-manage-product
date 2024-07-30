@@ -47,20 +47,20 @@ Ele utiliza uma série de tecnologias e bibliotecas para garantir eficiência, s
    ```bash
    git clone https://github.com/lucashfdeus/backend-manage-product.git
 
-## Observação Importante
-
-**⚠️ Certifique-se de executar a aplicação em modo Self-Hosting para garantir que a porta disponibilizada para o serviço esteja corretamente configurada e acessível. Isso é crucial para o funcionamento adequado da aplicação.**
-
 2. Certifique-se de que o Docker esteja instalado na sua máquina para executar o próximo comando.
    - **Instruções**: Abra o prompt de comando (cmd) na raiz do projeto (Soluction) e navegue até o diretório onde estão localizados os arquivos `start_containers.bat`.
    -  Em seguida, execute o script de inicialização dos containers Docker:
 exemplo: `\backend-manage-produc\ManageProduct> .\script-docker-compose.bat`
-     ```bash
+     ```bash package manager console
      start_containers.bat
      ```
 
 3. Execute o comando para atualizar o banco de dados com as migrations geradas pelo Entity Framework Core. O comando a ser utilizado é:
    ```bash
-   update-database --initial
+   Update-Database -Context ApplicationDbContext
+
+   ## Observação Importante
+
+**⚠️ Certifique-se de executar a aplicação em modo `Self-Hosting` para garantir que a porta disponibilizada para o serviço esteja corretamente configurada e acessível. Isso é crucial para o funcionamento adequado da aplicação.**
 
 
